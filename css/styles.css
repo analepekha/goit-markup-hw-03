@@ -16,14 +16,6 @@
   --img-gap: 30px;
 }
 
-body {
-  font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
-}
 /* Utilities */
 .list {
   padding-left: 0;
@@ -42,6 +34,19 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -283,7 +288,7 @@ ul {
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filter-item:not(:last-child) {
   margin-right: 8px;
@@ -310,28 +315,44 @@ ul {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--img-gap));
-  margin-top: calc(-1 * var(--img-gap));
+  margin-right: -30px;
+  margin-bottom: -30px;
+
+  /* margin-left: calc(-1 * var(--img-gap));
+  margin-top: calc(-1 * var(--img-gap)); */
 }
-.portfolio-list > .portfolio-item {
-  flex-basis: calc(100% / 3 - var(--img-gap));
-  margin-left: var(--img-gap);
-  margin-top: var(--img-gap);
+.portfolio-item {
+  width: calc((100% - 90px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
+/
+/* .portfolio-list > .portfolio-item {
+  /* flex-basis: calc(100% / 3 - var(--img-gap)); */
+  /* margin-left: var(--img-gap);
+  margin-top: var(--img-gap); */
+} */
+/* .portfolio-item {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+} */
 .portfolio-img {
   display: block;
   max-width: 100%;
 }
 .portfolio-content {
-  padding: 20px 24px 20px 24px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 .portfolio-content .subtitle-portfolio + .portfolio-txt {
   margin-top: 4px;
 }
-.portfolio-card {
+/* .portfolio-card {
   background: var(--primary-light-bg);
   border: 1px solid #eeeeee;
-}
+} */
 .portfolio-link {
   text-decoration: none;
   color: var(--primary-text-color);
@@ -357,9 +378,10 @@ ul {
 .footer-container {
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 .loc {
@@ -370,9 +392,6 @@ ul {
 }
 .contacts-item {
   margin-top: 9px;
-}
-.contacts-item:last-child {
-  margin-bottom: 60px;
 }
 .contacts-link {
   text-decoration: none;
