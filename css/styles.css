@@ -13,14 +13,11 @@
   --secondary-light-bg: #f5f4fa;
   /* Темная тема фона */
   --primary-dark-bg: #2f303a;
-  --img-gap: 30px;
 }
 
 /* Utilities */
 .list {
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
   list-style-type: none;
 }
 h1,
@@ -90,6 +87,8 @@ body {
 }
 .nav-list {
   display: flex;
+}
+.nav-header {
   margin-left: 93px;
 }
 .nav-list .nav-item:not(:last-child) {
@@ -148,15 +147,11 @@ body {
 
 /* Hero */
 .hero-section {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-.hero {
   text-align: center;
   background-color: var(--primary-dark-bg);
+  padding: 200px 0;
 }
 .hero-title {
-  display: block;
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -230,6 +225,8 @@ body {
   line-height: 1.7;
   color: var(--secondary-text-color);
 }
+
+/* Team */
 .team {
   background-color: var(--secondary-light-bg);
 }
@@ -260,8 +257,8 @@ body {
 .team-list .team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-img {
-  margin-bottom: 30px;
+.team-content {
+  padding: 30px 0;
 }
 .subtitle-team {
   margin-bottom: 10px;
@@ -272,8 +269,6 @@ body {
   text-align: center;
 }
 .team-txt {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -317,27 +312,13 @@ body {
   flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
-
-  /* margin-left: calc(-1 * var(--img-gap));
-  margin-top: calc(-1 * var(--img-gap)); */
 }
 .portfolio-item {
   width: calc((100% - 90px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
-/
-/* .portfolio-list > .portfolio-item {
-  /* flex-basis: calc(100% / 3 - var(--img-gap)); */
-  /* margin-left: var(--img-gap);
-  margin-top: var(--img-gap); */
-} */
-/* .portfolio-item {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-} */
 .portfolio-img {
-  display: block;
   max-width: 100%;
 }
 .portfolio-content {
@@ -346,18 +327,14 @@ body {
   border: 1px solid #eeeeee;
   border-top: 0;
 }
-.portfolio-content .subtitle-portfolio + .portfolio-txt {
-  margin-top: 4px;
-}
-/* .portfolio-card {
-  background: var(--primary-light-bg);
-  border: 1px solid #eeeeee;
-} */
+
 .portfolio-link {
   text-decoration: none;
   color: var(--primary-text-color);
 }
-.subtitle-portfolio {
+.portfolio-subtitle {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -374,25 +351,27 @@ body {
 /* Footer */
 .footer {
   background-color: var(--primary-dark-bg);
-}
-.footer-container {
   display: flex;
-  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .logo-footer {
-  margin-bottom: 20px;
+  display: inline-block;
 }
 .loc {
+  margin-top: 20px;
   line-height: 1.7;
   font-style: normal;
 
   color: var(--primary-text-darktheme);
 }
-.contacts-item {
+.contacts-list {
   margin-top: 9px;
 }
+.contacts-list .contacts-item + .contacts-item {
+  margin-top: 9px;
+}
+
 .contacts-link {
   text-decoration: none;
   font-style: normal;
